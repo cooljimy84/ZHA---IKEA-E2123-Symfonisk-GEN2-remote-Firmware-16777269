@@ -136,32 +136,26 @@ action:
     - '{{ trigger.event.data.params.move_mode == 1 }}'
     sequence: !input action_vol_down
   - conditions:
-    - '{{ command == ''shortcut_v1_events'' }}'
+    - '{{ command == ''short_release'' }}'
     - '{{ endpoint_id == 2 }}'
-    - '{{ trigger.event.data.command == [short_release] }}'
     sequence: !input action_1,1
   - conditions:
-    - '{{ command == ''shortcut_v1_events'' }}'
+    - '{{ command == ''long_release'' }}'
     - '{{ endpoint_id == 2 }}'
-    - '{{ trigger.event.data.command == [long_release] }}'
     sequence: !input action_1,2
   - conditions:
-    - '{{ command == ''shortcut_v1_events'' }}'
+    - '{{ command == ''multi_press_complete'' }}'
     - '{{ endpoint_id == 2 }}'
-    - '{{ trigger.event.data.command == [multi_press_complete] }}'
     sequence: !input action_1,3
   - conditions:
-    - '{{ command == ''shortcut_v1_events'' }}'
+    - '{{ command == ''short_release'' }}'
     - '{{ endpoint_id == 3 }}'
-    - '{{ trigger.event.data.command == [short_release] }}'
     sequence: !input action_2,1
   - conditions:
-    - '{{ command == ''shortcut_v1_events'' }}'
+    - '{{ command == ''long_release'' }}'
     - '{{ endpoint_id == 3 }}'
-    - '{{ trigger.event.data.commnad == [long_release] }}'
     sequence: !input action_2,2
   - conditions:
-    - '{{ command == ''shortcut_v1_events'' }}'
+    - '{{ command == ''multi_press_complete'' }}'
     - '{{ endpoint_id == 3 }}'
-    - '{{ trigger.event.data.command == [multi_press_complete] }}'
     sequence: !input action_2,3
