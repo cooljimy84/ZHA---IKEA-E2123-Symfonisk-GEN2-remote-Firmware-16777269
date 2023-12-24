@@ -1,8 +1,8 @@
 blueprint:
   name: ZHA - IKEA E2123 Symfonisk GEN2 remote Firmware 16777269
   description: Set up custom commands for each button on the Ikea Symfonisk Gen 2
-    Remote. The 2 shortcut buttons also have seperate functions for single, double press and
-    hold.
+    Remote. The 2 shortcut buttons also have seperate functions for single, double
+    press and hold.
   domain: automation
   input:
     remote:
@@ -51,14 +51,14 @@ blueprint:
       selector:
         action: {}
     action_1,2:
-      name: Single Dot button double press
-      description: Action to run on shortcut 1 button double press.
+      name: Single Dot button hold
+      description: Action to run on shortcut 1 button hold.
       default: []
       selector:
         action: {}
     action_1,3:
-      name: Single Dot button hold
-      description: Action to run on shortcut 1 button hold.
+      name: Single Dot button double press
+      description: Action to run on shortcut 1 button double press.
       default: []
       selector:
         action: {}
@@ -69,18 +69,18 @@ blueprint:
       selector:
         action: {}
     action_2,2:
+      name: Double Dot button hold
+      description: Action to run on shortcut 2 button hold.
+      default: []
+      selector:
+        action: {}
+    action_2,3:
       name: Double Dot button double press
       description: Action to run on shortcut 2 button double press.
       default: []
       selector:
         action: {}
-    action_2,3:
-      name: Doublr Dot button hold
-      description: Action to run on shortcut 2 button hold.
-      default: []
-      selector:
-        action: {}
-  source_url: https://community.home-assistant.io/t/zha-ikea-e2123-symfonisk-gen2-remote-customisable/584626
+  source_url: https://raw.githubusercontent.com/cooljimy84/ZHA---IKEA-E2123-Symfonisk-GEN2-remote-Firmware-16777269/main/ZHA%20-%20IKEA%20E2123%20Symfonisk%20GEN2%20remote%20Firmware%2016777269
 mode: single
 max_exceeded: silent
 trigger:
